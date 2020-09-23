@@ -28,7 +28,7 @@ class CricketViewController: BaseVC {
     
     @IBAction func didSelectNext(_ sender: Any) {
         
-        if selectedIndex != nil{
+        if selectedIndex == nil{
             self.showAlert("Alert", message: "Please Select Any One Of answer.")
         }else{
             let vc = BaseVC.vcFactory("Main", SBVC: "IndianFlagViewController") as! IndianFlagViewController

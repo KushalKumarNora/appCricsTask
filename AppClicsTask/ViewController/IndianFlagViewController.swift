@@ -30,7 +30,7 @@ class IndianFlagViewController: BaseVC {
         let currentTime = Date().string(format: "MMM d, h:mm a")
         
         
-        if name.isEmpty || playerName.isEmpty || formattedArray != "" {
+        if name.isEmpty || playerName.isEmpty || formattedArray == "" {
             self.showAlert("Alert", message: "Please select any one of answer.")
             
         }else{
@@ -53,7 +53,7 @@ class IndianFlagViewController: BaseVC {
         let currentTime = Date().string(format: "MMM d, h:mm a")
         
         
-        if name.isEmpty || playerName.isEmpty || formattedArray != "" {
+        if name.isEmpty || playerName.isEmpty || formattedArray == "" {
             self.showAlert("Alert", message: "Please select any one of answer.")
             
         } else {
