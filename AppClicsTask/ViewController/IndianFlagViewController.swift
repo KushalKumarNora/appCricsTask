@@ -69,12 +69,6 @@ class IndianFlagViewController: BaseVC {
                 topVCs.navigationController?.pushViewController(vc, animated: false)
             }
             
-            
-            
-            if let topVCs = UIApplication.topViewController() {
-                topVCs.navigationController?.pushViewController(vc, animated: false)
-                
-            }
         }
         
         

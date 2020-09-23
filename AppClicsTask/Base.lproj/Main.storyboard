@@ -140,7 +140,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="didSelectHistory:" destination="CpN-8i-whT" eventType="touchUpInside" id="9UH-Ks-m1V"/>
+                                    <action selector="didSelectHistory:" destination="CpN-8i-whT" eventType="touchUpInside" id="4qS-Yr-r5T"/>
                                 </connections>
                             </button>
                         </subviews>
