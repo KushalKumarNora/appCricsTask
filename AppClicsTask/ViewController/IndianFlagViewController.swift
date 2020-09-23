@@ -24,35 +24,9 @@ class IndianFlagViewController: BaseVC {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func didSelectHistory(_ sender: Any) {
-        
-        let formattedArray = (selectedFlagArr.map{String($0)}).joined(separator: ",")
-
-        let currentTime = Date().string(format: "MMM d, h:mm a")
-
-        if name.isEmpty || playerName.isEmpty || formattedArray == "" {
-            self.showAlert("Alert", message: "Please select any one of answer.")
-            
-        }else{
-            
-            let dict = ["name":name ,"flagColour":formattedArray ,"favCricketr":playerName,"date": currentTime ]
-            
-            coreDataModel.shareInstance.saveData(object: (dict))
-            let vc = BaseVC.vcFactory("Main", SBVC: "HistoryViewController") as! HistoryViewController
-            
-            if let topVCs = UIApplication.topViewController() {
-                topVCs.navigationController?.pushViewController(vc, animated: false)
-            }
-            
-
-        
-        if let topVCs = UIApplication.topViewController() {
-            topVCs.navigationController?.pushViewController(vc, animated: false)
-
-        }
-    }
-    
     @IBAction func didSelectFinish(_ sender: Any) {
+        
+        
         
         let formattedArray = (selectedFlagArr.map{String($0)}).joined(separator: ",")
         let currentTime = Date().string(format: "MMM d, h:mm a")
@@ -74,7 +48,37 @@ class IndianFlagViewController: BaseVC {
         }
         
     }
-  }
+    
+    @IBAction func didSelectHistory(_ sender: Any) {
+        
+        let formattedArray = (selectedFlagArr.map{String($0)}).joined(separator: ",")
+        
+        let currentTime = Date().string(format: "MMM d, h:mm a")
+        
+        if name.isEmpty || playerName.isEmpty || formattedArray == "" {
+            self.showAlert("Alert", message: "Please select any one of answer.")
+            
+        }else{
+            
+            let dict = ["name":name ,"flagColour":formattedArray ,"favCricketr":playerName,"date": currentTime ]
+            
+            coreDataModel.shareInstance.saveData(object: (dict))
+            let vc = BaseVC.vcFactory("Main", SBVC: "HistoryViewController") as! HistoryViewController
+            
+            if let topVCs = UIApplication.topViewController() {
+                topVCs.navigationController?.pushViewController(vc, animated: false)
+            }
+            
+            
+            
+            if let topVCs = UIApplication.topViewController() {
+                topVCs.navigationController?.pushViewController(vc, animated: false)
+                
+            }
+        }
+        
+        
+    }
 }
 
 extension IndianFlagViewController: UITableViewDelegate, UITableViewDataSource {
