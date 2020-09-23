@@ -27,9 +27,9 @@ class IndianFlagViewController: BaseVC {
     @IBAction func didSelectHistory(_ sender: Any) {
         
         let formattedArray = (selectedFlagArr.map{String($0)}).joined(separator: ",")
+
         let currentTime = Date().string(format: "MMM d, h:mm a")
-        
-        
+
         if name.isEmpty || playerName.isEmpty || formattedArray == "" {
             self.showAlert("Alert", message: "Please select any one of answer.")
             
@@ -44,6 +44,11 @@ class IndianFlagViewController: BaseVC {
                 topVCs.navigationController?.pushViewController(vc, animated: false)
             }
             
+
+        
+        if let topVCs = UIApplication.topViewController() {
+            topVCs.navigationController?.pushViewController(vc, animated: false)
+
         }
     }
     
@@ -69,7 +74,7 @@ class IndianFlagViewController: BaseVC {
         }
         
     }
-    
+  }
 }
 
 extension IndianFlagViewController: UITableViewDelegate, UITableViewDataSource {
