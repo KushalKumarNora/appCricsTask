@@ -10,7 +10,7 @@ import UIKit
 
 import UIKit
 
-class IndianFlagViewController: UIViewController {
+class IndianFlagViewController: BaseVC {
     
     var name : String = ""
     var playerName:String = ""
@@ -20,38 +20,56 @@ class IndianFlagViewController: UIViewController {
     var selectedFlagArr : [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-      self.tableView.tableFooterView = UIView()
+        self.tableView.tableFooterView = UIView()
         // Do any additional setup after loading the view.
     }
     
     @IBAction func didSelectHistory(_ sender: Any) {
         
+        let formattedArray = (selectedFlagArr.map{String($0)}).joined(separator: ",")
+        let currentTime = Date().string(format: "MMM d, h:mm a")
         
-        let vc = BaseVC.vcFactory("Main", SBVC: "HistoryViewController") as! HistoryViewController
         
-        if let topVCs = UIApplication.topViewController() {
-            topVCs.navigationController?.pushViewController(vc, animated: false)
+        if name.isEmpty || playerName.isEmpty || formattedArray != "" {
+            self.showAlert("Alert", message: "Please select any one of answer.")
+            
+        }else{
+            
+            let dict = ["name":name ,"flagColour":formattedArray ,"favCricketr":playerName,"date": currentTime ]
+            
+            coreDataModel.shareInstance.saveData(object: (dict))
+            let vc = BaseVC.vcFactory("Main", SBVC: "HistoryViewController") as! HistoryViewController
+            
+            if let topVCs = UIApplication.topViewController() {
+                topVCs.navigationController?.pushViewController(vc, animated: false)
+            }
+            
         }
     }
     
     @IBAction func didSelectFinish(_ sender: Any) {
         
-
         let formattedArray = (selectedFlagArr.map{String($0)}).joined(separator: ",")
         let currentTime = Date().string(format: "MMM d, h:mm a")
-
-        let dict = ["name":name ,"flagColour":formattedArray ,"favCricketr":playerName,"date": currentTime ]
-               coreDataModel.shareInstance.saveData(object: (dict as? [String : String])!)
-        let vc = BaseVC.vcFactory("Main", SBVC: "ViewController") as! ViewController
-               
-               if let topVCs = UIApplication.topViewController() {
-                   topVCs.navigationController?.pushViewController(vc, animated: false)
-               }
+        
+        
+        if name.isEmpty || playerName.isEmpty || formattedArray != "" {
+            self.showAlert("Alert", message: "Please select any one of answer.")
+            
+        } else {
+            let dict = ["name":name ,"flagColour":formattedArray ,"favCricketr":playerName,"date": currentTime ]
+            
+            coreDataModel.shareInstance.saveData(object: (dict ))
+            let vc = BaseVC.vcFactory("Main", SBVC: "ViewController") as! ViewController
+            
+            if let topVCs = UIApplication.topViewController() {
+                topVCs.navigationController?.pushViewController(vc, animated: false)
+            }
+            
+        }
         
     }
-  
-  
-
+    
 }
 
 extension IndianFlagViewController: UITableViewDelegate, UITableViewDataSource {
@@ -89,6 +107,7 @@ extension IndianFlagViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
 }
+    
 extension Date {
     func string(format: String) -> String {
         let formatter = DateFormatter()

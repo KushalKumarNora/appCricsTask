@@ -10,7 +10,7 @@
 
 import UIKit
 
-class CricketViewController: UIViewController {
+class CricketViewController: BaseVC {
 
     @IBOutlet weak var tableView: UITableView!
     var name :String = ""
@@ -28,14 +28,19 @@ class CricketViewController: UIViewController {
     
     @IBAction func didSelectNext(_ sender: Any) {
         
-        let vc = BaseVC.vcFactory("Main", SBVC: "IndianFlagViewController") as! IndianFlagViewController
-        vc.name = self.name
-        vc.playerName = arrPlayer[selectedIndex!]
-        
-        if let topVCs = UIApplication.topViewController() {
-            topVCs.navigationController?.pushViewController(vc, animated: false)
+        if selectedIndex != nil{
+            self.showAlert("Alert", message: "Please Select Any One Of answer.")
+        }else{
+            let vc = BaseVC.vcFactory("Main", SBVC: "IndianFlagViewController") as! IndianFlagViewController
+            vc.name = self.name
+            vc.playerName = arrPlayer[selectedIndex!]
+            
+            if let topVCs = UIApplication.topViewController() {
+                topVCs.navigationController?.pushViewController(vc, animated: false)
+            }
+
         }
-       
+               
     }
     
    
