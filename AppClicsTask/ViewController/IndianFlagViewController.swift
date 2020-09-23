@@ -26,8 +26,14 @@ class IndianFlagViewController: UIViewController {
     
     @IBAction func didSelectHistory(_ sender: Any) {
         
+        let formattedArray = (selectedFlagArr.map{String($0)}).joined(separator: ",")
+              let currentTime = Date().string(format: "MMM d, h:mm a")
+
+              let dict = ["name":name ,"flagColour":formattedArray ,"favCricketr":playerName,"date": currentTime ]
+                     coreDataModel.shareInstance.saveData(object: (dict as? [String : String])!)
         
         let vc = BaseVC.vcFactory("Main", SBVC: "HistoryViewController") as! HistoryViewController
+        
         
         if let topVCs = UIApplication.topViewController() {
             topVCs.navigationController?.pushViewController(vc, animated: false)
