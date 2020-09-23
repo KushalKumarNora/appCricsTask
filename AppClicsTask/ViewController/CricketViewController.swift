@@ -22,7 +22,6 @@ class CricketViewController: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
-        
        
     }
     
@@ -38,12 +37,8 @@ class CricketViewController: BaseVC {
             if let topVCs = UIApplication.topViewController() {
                 topVCs.navigationController?.pushViewController(vc, animated: false)
             }
-
         }
-               
     }
-    
-   
 
 }
 

@@ -11,9 +11,6 @@ import UIKit
 
 class ViewController: BaseVC {
     
-    
-   
-
     @IBOutlet weak var tfName: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()

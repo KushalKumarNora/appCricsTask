@@ -100,10 +100,8 @@ extension IndianFlagViewController: UITableViewDelegate, UITableViewDataSource {
         }
         else{
             
-            
             cell.accessoryType = UITableViewCell.AccessoryType.checkmark
             selectedFlagArr.append(flagColour[indexPath.row])
-            
             
         }
         
