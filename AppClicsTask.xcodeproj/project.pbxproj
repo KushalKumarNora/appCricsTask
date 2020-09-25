@@ -25,6 +25,8 @@
 		7B301D8F251A70FA00D722CC /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B301D8D251A70FA00D722CC /* HistoryCell.xib */; };
 		7B301D91251A73BD00D722CC /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B301D90251A73BD00D722CC /* HistoryViewController.swift */; };
 		7B301D94251A742600D722CC /* CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B301D93251A742600D722CC /* CoreDataModel.swift */; };
+		7BE8DF48251E079200E40449 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE8DF46251E079200E40449 /* Person+CoreDataClass.swift */; };
+		7BE8DF49251E079200E40449 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE8DF47251E079200E40449 /* Person+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		7B301D8D251A70FA00D722CC /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
 		7B301D90251A73BD00D722CC /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		7B301D93251A742600D722CC /* CoreDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
+		7BE8DF46251E079200E40449 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7BE8DF47251E079200E40449 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,8 @@
 		7B301D45251A679600D722CC = {
 			isa = PBXGroup;
 			children = (
+				7BE8DF46251E079200E40449 /* Person+CoreDataClass.swift */,
+				7BE8DF47251E079200E40449 /* Person+CoreDataProperties.swift */,
 				7B301D50251A679700D722CC /* AppClicsTask */,
 				7B301D6A251A679D00D722CC /* AppClicsTaskTests */,
 				7B301D75251A679D00D722CC /* AppClicsTaskUITests */,
@@ -316,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BE8DF49251E079200E40449 /* Person+CoreDataProperties.swift in Sources */,
 				7B301D94251A742600D722CC /* CoreDataModel.swift in Sources */,
 				7B301D87251A6D8100D722CC /* CricketViewController.swift in Sources */,
 				7B301D56251A679700D722CC /* ViewController.swift in Sources */,
@@ -326,6 +333,7 @@
 				7B0D7CA3251AE4CB007E3172 /* BaseVC.swift in Sources */,
 				7B301D89251A6EA300D722CC /* IndianFlagViewController.swift in Sources */,
 				7B301D8B251A6F7C00D722CC /* IndianFlagCell.swift in Sources */,
+				7BE8DF48251E079200E40449 /* Person+CoreDataClass.swift in Sources */,
 				7B301D54251A679700D722CC /* SceneDelegate.swift in Sources */,
 				7B301D85251A6CCB00D722CC /* CricketCell.swift in Sources */,
 			);
