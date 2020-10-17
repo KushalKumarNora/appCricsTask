@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DogCell" rowHeight="180" id="PsJ-dd-tjI" customClass="DogCell" customModule="ExaltaretechDemoTask" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="395" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PsJ-dd-tjI" id="eQ1-ph-nq7">
+                <rect key="frame" x="0.0" y="0.0" width="395" height="160"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I9g-1j-CHW">
+                        <rect key="frame" x="8" y="8" width="379" height="144"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o26-p1-djd">
+                                <rect key="frame" x="0.0" y="0.0" width="130" height="129"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="khO-gD-gHj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KushalKUmar Nora" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="1000" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mil-Si-ROX">
+                                <rect key="frame" x="140" y="10" width="229" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="characterWrap" numberOfLines="1000" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tna-sj-GnM">
+                                <rect key="frame" x="140" y="39" width="229" height="97"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Tna-sj-GnM" secondAttribute="trailing" constant="10" id="ARd-7a-1hK"/>
+                            <constraint firstAttribute="bottom" secondItem="Tna-sj-GnM" secondAttribute="bottom" constant="8" id="ARs-R8-RSF"/>
+                            <constraint firstItem="o26-p1-djd" firstAttribute="leading" secondItem="I9g-1j-CHW" secondAttribute="leading" id="DSg-HB-6IG"/>
+                            <constraint firstItem="Tna-sj-GnM" firstAttribute="top" secondItem="Mil-Si-ROX" secondAttribute="bottom" constant="5" id="UZK-CM-v83"/>
+                            <constraint firstItem="Mil-Si-ROX" firstAttribute="leading" secondItem="o26-p1-djd" secondAttribute="trailing" constant="10" id="Wr6-mk-4b1"/>
+                            <constraint firstAttribute="trailing" secondItem="Mil-Si-ROX" secondAttribute="trailing" constant="10" id="d3N-gA-OIo"/>
+                            <constraint firstItem="Mil-Si-ROX" firstAttribute="top" secondItem="I9g-1j-CHW" secondAttribute="top" constant="10" id="j5Q-Jq-BLm"/>
+                            <constraint firstItem="o26-p1-djd" firstAttribute="top" secondItem="I9g-1j-CHW" secondAttribute="top" id="mXg-cv-0Ok"/>
+                            <constraint firstAttribute="bottom" secondItem="o26-p1-djd" secondAttribute="bottom" constant="15" id="mah-jM-NDv"/>
+                            <constraint firstItem="Tna-sj-GnM" firstAttribute="leading" secondItem="o26-p1-djd" secondAttribute="trailing" constant="10" id="nUc-td-xOS"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="I9g-1j-CHW" secondAttribute="trailing" constant="8" id="1Ab-ns-TF8"/>
+                    <constraint firstAttribute="bottom" secondItem="I9g-1j-CHW" secondAttribute="bottom" constant="8" id="6cd-2U-nAF"/>
+                    <constraint firstItem="I9g-1j-CHW" firstAttribute="top" secondItem="eQ1-ph-nq7" secondAttribute="top" constant="8" id="bzs-Ue-bwN"/>
+                    <constraint firstItem="I9g-1j-CHW" firstAttribute="leading" secondItem="eQ1-ph-nq7" secondAttribute="leading" constant="8" id="l7j-lC-N6M"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="rN6-Do-i3C"/>
+            <connections>
+                <outlet property="descriptionLbl" destination="Tna-sj-GnM" id="N3w-AH-sE9"/>
+                <outlet property="titleLbl" destination="Mil-Si-ROX" id="kgB-aO-g9u"/>
+                <outlet property="userImg" destination="o26-p1-djd" id="G5w-Qp-4SH"/>
+            </connections>
+            <point key="canvasLocation" x="1512.3188405797102" y="41.517857142857139"/>
+        </tableViewCell>
+    </objects>
+</document>

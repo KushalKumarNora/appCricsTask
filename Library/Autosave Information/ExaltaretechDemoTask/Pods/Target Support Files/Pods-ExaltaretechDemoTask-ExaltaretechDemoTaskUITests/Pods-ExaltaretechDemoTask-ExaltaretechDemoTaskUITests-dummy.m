@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_ExaltaretechDemoTask_ExaltaretechDemoTaskUITests : NSObject
+@end
+@implementation PodsDummy_Pods_ExaltaretechDemoTask_ExaltaretechDemoTaskUITests
+@end
