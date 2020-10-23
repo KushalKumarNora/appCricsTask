@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bqC-2C-MVz">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ahl-xb-mHn">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -72,13 +72,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are the colors in the Indian national flag?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6BI-jT-j2w">
-                                <rect key="frame" x="20" y="188" width="374" height="53"/>
+                                <rect key="frame" x="20" y="188" width="374" height="52.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEc-y7-JaH">
-                                <rect key="frame" x="20" y="551" width="374" height="40"/>
+                                <rect key="frame" x="20" y="550.66666666666663" width="374" height="40"/>
                                 <color key="backgroundColor" red="0.30619192123413086" green="0.60841256380081177" blue="0.27505216002464294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="lZG-4X-pQA"/>
@@ -92,21 +92,21 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ga3-mV-JkF">
-                                <rect key="frame" x="20" y="261" width="374" height="280"/>
+                                <rect key="frame" x="20" y="260.66666666666669" width="374" height="280.00000000000006"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="280" id="n4n-uE-2Hv"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="IndianFlagCell" id="q0B-8y-GdZ" customClass="IndianFlagCell" customModule="AppClicsTask" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="374" height="46.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q0B-8y-GdZ" id="wIC-rO-jh9">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="46.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="46.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLh-e7-CS3">
-                                                    <rect key="frame" x="30" y="11" width="284" height="24.5"/>
+                                                    <rect key="frame" x="30" y="10.999999999999998" width="284" height="24.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -130,7 +130,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXQ-eh-Sgi">
-                                <rect key="frame" x="20" y="611" width="374" height="40"/>
+                                <rect key="frame" x="20" y="610.66666666666663" width="374" height="40"/>
                                 <color key="backgroundColor" red="0.30619192123413086" green="0.60841256380081177" blue="0.27505216002464294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="tfe-w2-UFl"/>
@@ -269,6 +269,26 @@
             </objects>
             <point key="canvasLocation" x="4029" y="161"/>
         </scene>
+        <!--Reveal View Controller-->
+        <scene sceneID="NIL-mY-ptA">
+            <objects>
+                <viewController storyboardIdentifier="SWRevealViewController" id="8T7-SV-OT1" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Muo-um-AqM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="e0n-Ws-GzR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6Aq-kE-lVI"/>
+                    <connections>
+                        <segue destination="tAw-dl-Yzl" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="dHw-Tt-OjM"/>
+                        <segue destination="bpq-bZ-NuN" kind="custom" identifier="sw_rare" customClass="SWRevealViewControllerSegueSetController" id="hxw-Y8-Rrd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EXU-yb-CY9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3352.1739130434785" y="-657.58928571428567"/>
+        </scene>
         <!--Cricket View Controller-->
         <scene sceneID="rw8-AZ-Gfz">
             <objects>
@@ -308,14 +328,14 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CricketCell" id="CIA-cH-WEr" customClass="CricketCell" customModule="AppClicsTask" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="374" height="46.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CIA-cH-WEr" id="KO5-gY-zsT">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="46.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="46.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mI8-tI-0e4">
-                                                    <rect key="frame" x="30" y="11" width="284" height="24.5"/>
+                                                    <rect key="frame" x="30" y="10.999999999999998" width="284" height="24.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -358,8 +378,19 @@
                         <barButtonItem key="leftBarButtonItem" id="hSA-Fv-iq2">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="ONQ-jh-DsF">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9RS-nM-guE">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <connections>
+                                <action selector="didSelectBarBtn:" destination="drG-Xn-5Ws" id="8K6-ax-R2o"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="barBtn" destination="ONQ-jh-DsF" id="mlY-2v-yDA"/>
                         <outlet property="tableView" destination="KQD-1S-PAS" id="yg6-Mg-nAu"/>
                     </connections>
                 </viewController>
@@ -404,6 +435,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c9S-Da-WCQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6397.1014492753629" y="130.58035714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Wpf-Wb-ahA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ahl-xb-mHn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Uv-Lk-baV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8T7-SV-OT1" kind="relationship" relationship="rootViewController" id="R1a-QO-uPK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NuW-lO-KND" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2442.0289855072465" y="-657.58928571428567"/>
         </scene>
     </scenes>
 </document>

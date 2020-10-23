@@ -25,6 +25,7 @@
 		7B301D8F251A70FA00D722CC /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B301D8D251A70FA00D722CC /* HistoryCell.xib */; };
 		7B301D91251A73BD00D722CC /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B301D90251A73BD00D722CC /* HistoryViewController.swift */; };
 		7B301D94251A742600D722CC /* CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B301D93251A742600D722CC /* CoreDataModel.swift */; };
+		7B6E825E253E86D200063A5D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E825D253E86D200063A5D /* SWRevealViewController.m */; };
 		7BE8DF48251E079200E40449 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE8DF46251E079200E40449 /* Person+CoreDataClass.swift */; };
 		7BE8DF49251E079200E40449 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE8DF47251E079200E40449 /* Person+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
@@ -73,6 +74,9 @@
 		7B301D8D251A70FA00D722CC /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
 		7B301D90251A73BD00D722CC /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		7B301D93251A742600D722CC /* CoreDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
+		7B6E825B253E86D100063A5D /* AppClicsTask-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppClicsTask-Bridging-Header.h"; sourceTree = "<group>"; };
+		7B6E825C253E86D200063A5D /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		7B6E825D253E86D200063A5D /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		7BE8DF46251E079200E40449 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7BE8DF47251E079200E40449 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,12 +132,15 @@
 		7B301D45251A679600D722CC = {
 			isa = PBXGroup;
 			children = (
+				7B6E825C253E86D200063A5D /* SWRevealViewController.h */,
+				7B6E825D253E86D200063A5D /* SWRevealViewController.m */,
 				7BE8DF46251E079200E40449 /* Person+CoreDataClass.swift */,
 				7BE8DF47251E079200E40449 /* Person+CoreDataProperties.swift */,
 				7B301D50251A679700D722CC /* AppClicsTask */,
 				7B301D6A251A679D00D722CC /* AppClicsTaskTests */,
 				7B301D75251A679D00D722CC /* AppClicsTaskUITests */,
 				7B301D4F251A679700D722CC /* Products */,
+				7B6E825B253E86D100063A5D /* AppClicsTask-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -258,6 +265,7 @@
 				TargetAttributes = {
 					7B301D4D251A679700D722CC = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 					};
 					7B301D66251A679D00D722CC = {
 						CreatedOnToolsVersion = 11.4;
@@ -324,6 +332,7 @@
 			files = (
 				7BE8DF49251E079200E40449 /* Person+CoreDataProperties.swift in Sources */,
 				7B301D94251A742600D722CC /* CoreDataModel.swift in Sources */,
+				7B6E825E253E86D200063A5D /* SWRevealViewController.m in Sources */,
 				7B301D87251A6D8100D722CC /* CricketViewController.swift in Sources */,
 				7B301D56251A679700D722CC /* ViewController.swift in Sources */,
 				7B301D52251A679700D722CC /* AppDelegate.swift in Sources */,
@@ -508,6 +517,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AppClicsTask/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -516,6 +526,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.DevIOS..AppClicsTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppClicsTask-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -525,6 +537,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AppClicsTask/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -533,6 +546,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.DevIOS..AppClicsTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppClicsTask-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

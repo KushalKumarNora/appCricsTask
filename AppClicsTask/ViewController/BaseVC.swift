@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 class BaseVC: UIViewController {
-   
+    
     var alertVC: UIAlertController?
     
-
+    
     func showAlert(_ title: String?,
                    message: String?,
                    defaultBtnTitle: String? = nil,
@@ -32,11 +32,11 @@ class BaseVC: UIViewController {
         self.present(alertVC, animated: true, completion: nil)
         
     }
-   
+    
     class func vcFactory(_ SB: String, SBVC: String) -> UIViewController {
         return UIStoryboard(name: SB, bundle: nil).instantiateViewController(withIdentifier: SBVC)
     }
-  
+    
 }
 
 

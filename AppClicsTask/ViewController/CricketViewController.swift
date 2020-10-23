@@ -10,8 +10,10 @@
 
 import UIKit
 
-class CricketViewController: BaseVC {
 
+class CricketViewController: BaseVC{
+    
+    @IBOutlet weak var barBtn: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     var name :String = ""
     let arrPlayer : [String] = ["Sachin Tendulkar","Virat Kolli", "Adam Gilchirst","Jacques Kallis"]
@@ -22,9 +24,14 @@ class CricketViewController: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
-       
+        self.barBtn?.target = self.revealViewController()
+        self.barBtn?.action  = #selector(SWRevealViewController.revealToggle(_:))
+        
     }
     
+    @IBAction func didSelectBarBtn(_ sender: Any) {
+      
+    }
     @IBAction func didSelectNext(_ sender: Any) {
         
         if selectedIndex == nil{
@@ -39,7 +46,7 @@ class CricketViewController: BaseVC {
             }
         }
     }
-
+    
 }
 
 extension CricketViewController: UITableViewDelegate, UITableViewDataSource {
@@ -48,23 +55,23 @@ extension CricketViewController: UITableViewDelegate, UITableViewDataSource {
     return arrPlayer.count
  }
 
- func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cricketCell = tableView.dequeueReusableCell(withIdentifier: "CricketCell") as? CricketCell else {
-        return CricketCell()
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cricketCell = tableView.dequeueReusableCell(withIdentifier: "CricketCell") as? CricketCell else {
+            return CricketCell()
+        }
+        cricketCell.nameLbl.text = "\(alphabet[indexPath.row]) \(arrPlayer[indexPath.row])"
+        
+        
+        if(indexPath.row == selectedIndex)
+        {
+            cricketCell.accessoryType =  UITableViewCell.AccessoryType.checkmark
+        }
+        else
+        {
+            cricketCell.accessoryType =  UITableViewCell.AccessoryType.none
+        }
+        return cricketCell
     }
-    cricketCell.nameLbl.text = "\(alphabet[indexPath.row]) \(arrPlayer[indexPath.row])"
-    
-   
-          if(indexPath.row == selectedIndex)
-          {
-             cricketCell.accessoryType =  UITableViewCell.AccessoryType.checkmark
-          }
-          else
-          {
-             cricketCell.accessoryType =  UITableViewCell.AccessoryType.none
-          }
-    return cricketCell
- }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         

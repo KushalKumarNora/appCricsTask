@@ -20,7 +20,7 @@ class ViewController: BaseVC {
     
     
     @IBAction func didSelectNext(_ sender: Any) {
-        if tfName.text!.isEmpty{
+        if tfName.text!.isEmpty {
               self.showAlert("Alert", message: "Please Enter Name")
         }else{
             
